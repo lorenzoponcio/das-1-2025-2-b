@@ -99,7 +99,25 @@ Um método deve invocar somentes os seguintes outros métodos:
 
 *Princípio Aberto/Fechado*
 
-Uma classe deve estar fechada para modificações e aberta para extensões
+-Uma classe deve estar fechada para modificações e aberta para extensões.  
+-*Classe Abstrata*: pegar uma classe e misturar com uma interface (meio incompleta).  
+-Isso significa projetá-la de forma a permitir novas funcionalidades sem alterar seu código, usando recursos como herança, funções lambda e padrões de projeto, garantindo flexibilidade e adaptabilidade. 
+
+
+### Aula 14/08  
+
+*Princípio de Substituição de Liskov (LSP)*
+
+-Herança define uma relação *é-um* entre objetos de uma classe base e objetos de subclasses.  
+-Quando se tem uma herança, subclasses precisam dos mesmos métodos que o pai.
+-Substitui um filho por outro, sem ter perda.
+
+
+## Aula 18/08
+
+*Padrões de Projeto*
+
+
 
 
 
