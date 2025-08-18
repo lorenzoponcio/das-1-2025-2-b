@@ -11,5 +11,7 @@
 
     <modules>
         <module>solid</module>
+        <module>designpatterns</module>
     </modules>
+    
 </project>
