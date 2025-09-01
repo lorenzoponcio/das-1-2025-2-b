@@ -1,4 +1,4 @@
-## Aula 31/07
+# Aula 31/07
 
 *Abstrações*
 
@@ -27,7 +27,7 @@ Característica muito valorizada por grandes empresas, a escolha da estrutura co
 
 Oculta a complexidade e a transforma em coisas simples para o dia-a-dia, ou seja, não precisamos saber o que acontece por detrás dos panos para entender como é o funcionamento do produto.
 
-## Aula 04/08
+# Aula 04/08
 
 *Getter e Setter*
 
@@ -42,11 +42,6 @@ Toda classe deve implementar uma única responsabilidade, ou seja, ser responsá
 *Acoplamento*
 
 Quando falamos de acoplamento nos referimos a conexão entre duas classes, no qual existem 2 tipos: acomplamento aceitável e acoplamento ruim.
- _____         _______  
-|__A__|       |___B___|
-|     |  -->  |       |
-|_____|       |fazqq()| 
-|_____|       |_______|
 
 A seta entre A e B indíca uma variável
 
@@ -63,7 +58,7 @@ Sempre que possível o ideal é reduzir o acoplamento, podendo através de certo
 "Maximize a coesão das classes e minimize o acoplamento entre elas."
 
 
-## Aula 11/08
+# Aula 11/08
 
 *Princípio de Inversão de Dependências*
 
@@ -104,7 +99,7 @@ Um método deve invocar somentes os seguintes outros métodos:
 -Isso significa projetá-la de forma a permitir novas funcionalidades sem alterar seu código, usando recursos como herança, funções lambda e padrões de projeto, garantindo flexibilidade e adaptabilidade. 
 
 
-### Aula 14/08  
+# Aula 14/08  
 
 *Princípio de Substituição de Liskov (LSP)*
 
@@ -113,10 +108,47 @@ Um método deve invocar somentes os seguintes outros métodos:
 -Substitui um filho por outro, sem ter perda.
 
 
-## Aula 18/08
+# Aula 18/08
 
 *Padrões de Projeto*
 
+# Aula 28/08
+
+A estrutura escolhida serve para suportar o que for colocado no código
+
+"Arquitetura é sobre algo importante… seja lá o que for." — Ralph Johnson
+
+Características de Arquitetura como Requisitos Não Funcionais
+
+As características arquiteturais representam os critérios essenciais para o sucesso de um sistema, geralmente relacionados a aspectos não funcionais, como desempenho, segurança e escalabilidade, que são independentes das funcionalidades específicas. Nem sempre é possível atender a todas essas características simultaneamente, sendo necessário priorizar algumas em detrimento de outras, conforme as necessidades do projeto.
+
+Decisões de Arquitetura
+
+O arquiteto de software deve escolher tecnologias e abordagens com as quais tenha maior domínio e que melhor atendam aos objetivos do sistema. Essas decisões estabelecem diretrizes claras sobre como o sistema deve ser desenvolvido, garantindo consistência e qualidade na implementação.
+
+Princípios de Design
+
+Entre os princípios fundamentais, destaca-se a minimização do acoplamento entre componentes para aumentar a modularidade e facilitar a manutenção. Em arquiteturas baseadas em microserviços, recomenda-se o uso de comunicação assíncrona via mensagens para melhorar o desempenho e a escalabilidade dos serviços.
+
+# Aula 01/09
+
+*Expectativas de um Arquiteto* 
+
+Existem 8 expectativas principais para um arquiteto de software
+
+## Orientação é a palavra de ordem nessa primeira expectativa
+
+1- Tomar decisões de arquitetura
+2- Analisar continuamente a arquitetura
+3- Manter-se atualizado com as últimas tendências
+## levando em consideração a relevância para seu contexto
+4- Assegurar a conformidade com as decisões
+## servir como um guia para a equipe, levando em consideração o contexto do projeto
+5- Exposição e experiência diversificadas
+## Carreira profissional relevante
+6- Ter conhecimento sobre o domínio do negócio
+7- Ter habilidades interpessoais
+8- Entender e lidar bem com questões políticas
 
 
 
