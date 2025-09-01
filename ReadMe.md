@@ -151,6 +151,17 @@ Existem 8 expectativas principais para um arquiteto de software
 8- Entender e lidar bem com questões políticas
 
 
+DevOps - Considerado um clico contínuo e interno
+
+Entregar valor para o cliente
+
+1- Planejar
+2- Criar - Codar
+3- Publicar o código em um lugar central - Integração contínua
+4- Implantar - Cliente final
+5- Operar - Monitorar
+6- Comentários contínuos
+
 
 
 
