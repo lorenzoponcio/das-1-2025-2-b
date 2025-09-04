@@ -163,5 +163,34 @@ Entregar valor para o cliente
 6- Comentários contínuos
 
 
+# Aula 04/09
+
+# Diferença entre arquitetura e Design 
+
+Enquanto o arquiteto é responsável pela parte estrutural do desenvolvimento de software, o designer foca na parte visual e de usabilidade, como criar telas, fluxos de navegação e diagramas de classes. O arquiteto atua analisando os requisitos do sistema, definindo padrões de arquitetura, escolhendo tecnologias e garantindo que a solução seja escalável, segura e mantenha qualidade técnica ao longo do tempo.
+
+O designer se preocupa em tornar a experiência do usuário intuitiva e agradável, trabalhando com aspectos estéticos e interação. Já o arquiteto precisa pensar em como os componentes do sistema se conectam e funcionam juntos, antecipando possíveis problemas e facilitando a comunicação técnica entre as equipes. Assim, apesar de ambos colaborarem para o sucesso do projeto, seus focos e responsabilidades são complementares, mas distintos.
+
+# Arquitetura
+
+As decisões que o arquiteto toma nem sempre funcionam para as equipes de desenvolvimento, e as mudanças feitas pelas equipes, que impactam a arquitetura, raramente são comunicadas de volta ao arquiteto. Para que a arquitetura funcione bem, é necessário quebrar as barreiras físicas e virtuais entre arquitetos e desenvolvedores, criando uma relação bidirecional forte entre ambos.
+
+# Escopo dos Detalhes Técnicos
+
+O nível de detalhes técnicos varia entre desenvolvedores e arquitetos. Diferente do desenvolvedor, que precisa de profundidade técnica para executar seu trabalho, o arquiteto deve ter uma grande amplitude técnica para pensar estrategicamente e enxergar as questões sob a perspectiva da arquitetura.
+
+# Valor do Arquiteto
+
+Grande parte do valor do arquiteto está no seu amplo conhecimento tecnológico e na capacidade de usar essas tecnologias para resolver problemas específicos. Por exemplo, é mais vantajoso para um arquiteto conhecer cinco soluções diferentes para um problema do que ser especialista em apenas uma.
+
+# Amplitude vs Profundidade
+
+Para arquitetos, a amplitude é mais importante do que a profundidade técnica. Eles devem tomar decisões que combinam capacidades com restrições técnicas, por isso, possuir um vasto conhecimento de diversas soluções é fundamental.
+
+
+# Como é a formação do conhecimento de um arquiteto modelo T?
+
+Um arquiteto modelo T tem conhecimento amplo de várias tecnologias e domínio profundo em pelo menos uma área técnica. Ele entende diferentes soluções, sabe fazer escolhas estratégicas e técnicas. Esse conhecimento se forma ao aprender continuamente, explorar novas tecnologias e se envolver em decisões práticas, como provas de conceito e revisão de código. É importante equilibrar visão técnica com entendimento dos objetivos do negócio. Assim, o arquiteto T atua como um elo entre times e tecnologias, garantindo qualidade e inovação.
+
 
 
