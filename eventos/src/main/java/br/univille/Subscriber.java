@@ -33,5 +33,7 @@ public class Subscriber {
                 System.out.println("Ja eras");
             })
             .buildProcessorClient();
+
+        processorClient.start();
     }
 }
