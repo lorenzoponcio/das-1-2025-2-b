@@ -26,8 +26,12 @@ public class Subscriber {
             .processMessage(context -> {
                 System.out.println(
                     context.getMessage()
-                    .getBody().toString()
-                );
+                    .getBody().toString());
+                context.complete();
             })
+            .processError(context -> {
+                System.out.println("Ja eras");
+            })
+            .buildProcessorClient();
     }
 }
