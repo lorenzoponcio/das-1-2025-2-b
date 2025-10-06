@@ -252,9 +252,11 @@ O texto organiza essas características em três grupos principais:
 
 - Transversais, que abrangem questões gerais, como acessibilidade, requisitos legais, segurança, privacidade e usabilidade.
 
-O capítulo enfatiza ainda as ambiguidades nos termos (como disponibilidade vs. confiabilidade) e a necessidade de trade-offs, pois não é possível maximizar todas as características ao mesmo tempo. Melhorar segurança, por exemplo, pode afetar o desempenho. Por isso, os arquitetos devem buscar a “arquitetura menos pior”, equilibrando prioridades sem sobrecarregar o sistema.
+Outro ponto relevante discutido é a constante ambiguidade que cerca esses termos. Muitos deles, como disponibilidade e confiabilidade, se sobrepõem, e a falta de padronização pode gerar confusão entre equipes e organizações. O capítulo lembra que, por essa razão, arquitetos muitas vezes criam suas próprias nomenclaturas ou definições internas para lidar com as necessidades específicas de seus contextos.
 
-Por fim, destaca-se a importância de projetar arquiteturas de forma iterativa, permitindo ajustes e evolução ao longo do tempo, em linha com os princípios do desenvolvimento ágil.
+Também se destaca a questão dos trade-offs, já que não é possível maximizar todas as características da arquitetura ao mesmo tempo. Melhorar a segurança, por exemplo, quase sempre implica perda de desempenho. Por isso, o papel do arquiteto é equilibrar essas escolhas, priorizando as características mais críticas para o negócio. O texto utiliza a metáfora de pilotar um helicóptero, em que cada ajuste em um controle afeta os outros, para ilustrar esse equilíbrio delicado.
+
+O capítulo conclui enfatizando que não se deve buscar a “melhor arquitetura”, mas sim a “menos pior”, aquela que consegue atender às necessidades mais importantes sem sobrecarregar o sistema com exigências excessivas e contraditórias. Nesse sentido, a arquitetura deve ser pensada de forma iterativa, permitindo ajustes contínuos conforme as necessidades do projeto e do negócio evoluem. Essa abordagem reflete diretamente os princípios do desenvolvimento ágil, que valorizam a adaptação e a evolução incremental.
 
 
 
