@@ -234,4 +234,27 @@ Para arquitetos, a amplitude é mais importante do que a profundidade técnica. 
 Um arquiteto modelo T tem conhecimento amplo de várias tecnologias e domínio profundo em pelo menos uma área técnica. Ele entende diferentes soluções, sabe fazer escolhas estratégicas e técnicas. Esse conhecimento se forma ao aprender continuamente, explorar novas tecnologias e se envolver em decisões práticas, como provas de conceito e revisão de código. É importante equilibrar visão técnica com entendimento dos objetivos do negócio. Assim, o arquiteto T atua como um elo entre times e tecnologias, garantindo qualidade e inovação.
 
 
+# Aula 06/10
+
+## Resumo Reduzido do Capítulo 4 – Características da Arquitetura
+
+O capítulo 4 trata das características da arquitetura, que diferem dos requisitos funcionais por não definirem o que o sistema faz, mas sim como ele deve operar para ser eficiente, confiável e sustentável. Essas características são críticas porque orientam decisões estruturais de design e garantem o sucesso do software.
+
+Para serem consideradas características da arquitetura, elas devem: representar uma consideração de design fora do domínio do problema, influenciar a estrutura do sistema e ser essenciais para o sucesso da aplicação. Algumas são explícitas, aparecendo nos requisitos, e outras implícitas, como segurança e disponibilidade, que muitas vezes não são documentadas, mas são indispensáveis.
+
+O texto organiza essas características em três grupos principais:
+
+- Operacionais, que lidam com o funcionamento em produção. O quadro destacado no capítulo lista as mais importantes: disponibilidade, continuidade, desempenho, recuperabilidade, 
+
+- confiabilidade/segurança, robustez e escalabilidade. Elas asseguram que o sistema seja estável, resiliente e capaz de crescer.
+
+- Estruturais, que envolvem a qualidade interna do código, como modularidade, manutenção, portabilidade e atualização.
+
+- Transversais, que abrangem questões gerais, como acessibilidade, requisitos legais, segurança, privacidade e usabilidade.
+
+O capítulo enfatiza ainda as ambiguidades nos termos (como disponibilidade vs. confiabilidade) e a necessidade de trade-offs, pois não é possível maximizar todas as características ao mesmo tempo. Melhorar segurança, por exemplo, pode afetar o desempenho. Por isso, os arquitetos devem buscar a “arquitetura menos pior”, equilibrando prioridades sem sobrecarregar o sistema.
+
+Por fim, destaca-se a importância de projetar arquiteturas de forma iterativa, permitindo ajustes e evolução ao longo do tempo, em linha com os princípios do desenvolvimento ágil.
+
+
 
