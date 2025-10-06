@@ -58,6 +58,47 @@ Sempre que possível o ideal é reduzir o acoplamento, podendo através de certo
 "Maximize a coesão das classes e minimize o acoplamento entre elas."
 
 
+# Aula 07/08  
+
+*SOLID*
+
+# Princípio da Responsabilidade Única (SRP)
+
+- Esse princípio está ligado diretamente à ideia de coesão.
+
+- Cada classe deve assumir apenas uma responsabilidade, ou seja, ter um único motivo para ser alterada.
+
+- Isso significa separar o que é apresentação (exibição de dados, interface) do que é regra de negócio (lógica e processamento).
+
+- Classes que lidam com a parte visual não devem depender das que tratam da lógica, já que cada uma evolui por razões diferentes.
+
+- Um exemplo de quebra desse princípio seria criar uma classe que, além de calcular valores, também imprime os resultados no console.
+
+# Princípio da Segregação de Interfaces (ISP)
+
+- O foco aqui são as interfaces: elas precisam ser pequenas, coesas e específicas.
+
+- Esse princípio é uma extensão da responsabilidade única, mas aplicado às interfaces.
+
+- O objetivo é garantir que os clientes (classes que usam essas interfaces) não precisem implementar métodos que não fazem sentido para eles.
+
+- Quando uma interface reúne funcionalidades de grupos diferentes, o ideal é dividi-la em várias interfaces menores e direcionadas.
+
+- Isso reduz dependências desnecessárias e aumenta a flexibilidade do sistema.
+
+
+# Padrões de Projeto
+
+- São 22 soluções recorrentes para problemas comuns de design de software.
+
+- Padrão Observador (Observer)
+
+- Exemplo clássico: a interface listener (como um “click listener”).
+
+- Caso seja necessário reagir a outro tipo de evento (ex.: movimento), cria-se uma interface dedicada para isso.
+
+
+
 # Aula 11/08
 
 *Princípio de Inversão de Dependências*
