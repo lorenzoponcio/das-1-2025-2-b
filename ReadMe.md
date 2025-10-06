@@ -247,7 +247,7 @@ O texto organiza essas características em três grupos principais:
 - Operacionais, que lidam com o funcionamento em produção. O quadro destacado no capítulo lista as mais importantes: disponibilidade, continuidade, desempenho, recuperabilidade, 
 
 - confiabilidade/segurança, robustez e escalabilidade. Elas asseguram que o sistema seja estável, resiliente e capaz de crescer.
-
+"0
 - Estruturais, que envolvem a qualidade interna do código, como modularidade, manutenção, portabilidade e atualização.
 
 - Transversais, que abrangem questões gerais, como acessibilidade, requisitos legais, segurança, privacidade e usabilidade.
