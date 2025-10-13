@@ -259,4 +259,19 @@ Também se destaca a questão dos trade-offs, já que não é possível maximiza
 O capítulo conclui enfatizando que não se deve buscar a “melhor arquitetura”, mas sim a “menos pior”, aquela que consegue atender às necessidades mais importantes sem sobrecarregar o sistema com exigências excessivas e contraditórias. Nesse sentido, a arquitetura deve ser pensada de forma iterativa, permitindo ajustes contínuos conforme as necessidades do projeto e do negócio evoluem. Essa abordagem reflete diretamente os princípios do desenvolvimento ágil, que valorizam a adaptação e a evolução incremental.
 
 
+# Aula 13/10
+
+## CQRS - Command Query Responsibility Segregation
+
+Quando duas pessoas tentam acessar o mesmo banco para realizar duas (operações leitura e escrita) ocorrerá um lock content, portanto para resolver isso utilizamos de um método para criar uma cópia do banco somente para leitura. 
+
+Assim entra em ação então o CQRS, o qual permitirá conectar nestes dois bancos, um para realizar leituras e outro para escritas. 
+
+Benefícios:
+
+Escalabilidade
+Separação de Responsabilidades
+Segurança
+Queries Otimizadas
+
 
