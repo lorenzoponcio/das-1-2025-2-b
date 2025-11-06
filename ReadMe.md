@@ -259,19 +259,145 @@ Também se destaca a questão dos trade-offs, já que não é possível maximiza
 O capítulo conclui enfatizando que não se deve buscar a “melhor arquitetura”, mas sim a “menos pior”, aquela que consegue atender às necessidades mais importantes sem sobrecarregar o sistema com exigências excessivas e contraditórias. Nesse sentido, a arquitetura deve ser pensada de forma iterativa, permitindo ajustes contínuos conforme as necessidades do projeto e do negócio evoluem. Essa abordagem reflete diretamente os princípios do desenvolvimento ágil, que valorizam a adaptação e a evolução incremental.
 
 
-# Aula 13/10
+## Aula 13/10
 
-## CQRS - Command Query Responsibility Segregation
+- **CQRS**
 
-Quando duas pessoas tentam acessar o mesmo banco para realizar duas (operações leitura e escrita) ocorrerá um lock content, portanto para resolver isso utilizamos de um método para criar uma cópia do banco somente para leitura. 
+- Look contention: dpois usuários usando um serviço, ee trava a operação
+- Performace problems: problemas de limitações, sistema operacional não suporta
 
-Assim entra em ação então o CQRS, o qual permitirá conectar nestes dois bancos, um para realizar leituras e outro para escritas. 
+- spring comentar en dois tipos de dados 1-write 2-read
+  - Acaba com o dead lock
+  - segrega para uma instancia
+  - SEPARAÇÃO DE RESPOSABILIDADE
 
-Benefícios:
+### Padrões Fundamentais
 
-Escalabilidade
-Separação de Responsabilidades
-Segurança
-Queries Otimizadas
+- Estilos de Arquitetura
+
+- A grabde bola de lama: onde o código é uma confusão mal estruturada
+- sistema que cresceu de forma totalmete desordenada
+
+- Arquitetura Unitária: 
+
+- Cliente/ Servido
+
+- Desktop + Servidor de banco de dados
+
+![alt text](image-8.png)
+
+- Navegador + Servidor web
+
+![alt text](image-10.png)
+
+<<<<<<< HEAD
+## Aula 16/10
+
+### Retry pattern
+  Ele permite que uma aplicação trate falhas transitórias ao tentar se
+  conectar a um serviço ou recurso de rede, repetindo de forma transparente uma operação que falhou.
+
+- **Estratégias de Repetição:**
+  - Cancelar: Se a falha indicar que não é transitória ou é improvável que seja bem-sucedida se repetida, a aplicação deve cancelar a operação e relatar uma exceção.
+
+  - Tentar novamente imediatamente: Se a falha for incomum ou rara, como um pacote de rede corrompido durante a transmissão, o melhor curso de ação pode ser repetir imediatamente a solicitação.
+
+  - Tentar novamente após atraso: Se a falha for causada por falhas mais comuns de conectividade ou serviço ocupado, a rede ou o serviço pode precisar de um curto período enquanto os problemas são corrigidos. Nesse caso, atrasar programaticamente a repetição é uma boa estratégia.
+
+- Evitar tempestades de repetição
+- Registrar falhas
+- Testar o código de repetição
+
+### Fundamentos: 
+
+- **Arquiteturas Monolíticas Versus Distribuídas**
+    - monolítico (uma unidade de implementação de todo o código)
+    - distribuído (várias unidades de implementação conectadas por protocolos de acesso remoto)
+    - Arquiteturas distribuídas oferecem melhor desempenho, escalabilidade e disponibilidade, mas trazem maior complexidade e riscos, principalmente por dependerem da rede. Esses riscos são resumidos nas oito falácias da computação distribuída
+
+- **As 8 Falácias da Computação Distribuída**
+
+- A Rede é Confiável:
+  A rede pode falhar. Serviços podem ficar inacessíveis, exigindo uso de timeouts e circuit breakers.
+
+- A Latência é Zero:
+  Chamadas remotas são muito mais lentas que chamadas locais. É crucial medir e conhecer a latência média e seus percentis.
+
+- A Largura de Banda é Infinita:
+  A comunicação entre serviços consome banda. O excesso de dados transmitidos (stamp coupling) prejudica o desempenho.
+
+- A Rede é Segura:
+ Cada endpoint deve ser protegido, aumentando a complexidade e reduzindo o desempenho.
+
+- A Topologia Nunca Muda:
+  A infraestrutura de rede muda constantemente, afetando latência e conexões. É vital manter comunicação com a equipe de rede.
+
+- Existe Apenas um Administrador:
+  Há vários administradores e equipes de rede; a coordenação entre todos é necessária.
+
+- O Custo do Transporte é Zero:
+  Chamadas remotas têm custos reais (infraestrutura, servidores, gateways, proxies etc.), tornando sistemas distribuídos mais caros.
+
+- A Rede é Homogênea:
+  Redes usam equipamentos de múltiplos fornecedores, nem sempre totalmente compatíveis, afetando desempenho e confiabilidade.
+
+
+## Aula 20/10 e 23/10
+
+### Estilo de Arquitetura em Camadas
+
+  Os componentes no estilo de arquitetura em camadas são organizados em camadas horizontais lógicas, com cada camada tendo uma função específica dentro da aplicação (como lógica de apresentação ou lógica de negócio).
+
+- **Camadas de Isolamento**
+  - Significa que as alterações feitas em uma camada da arquitetura normalmente não impactam nem afetam os componentes nas outras camadas, fazendo com que os contratos entre essas camadas continuem inalterados.
+  - Cada camada no estilo de arquitetura em camadas pode ser fechada ou aberta
+  - Fechada: conforme uma requisição desce de camada em camada, ela não pode pular nenhuma, mas pode passar pela camada imediatamente abaixo dela para chegar na próxima
+  - Aberta: camada de apresentação acessasse o banco de dados diretamente para as solicitações de recuperação simples, evitando as camadas desnecessárias
+
+- **Adicionando Camadas**
+  - Adicionar camadas abertas e fechadas ajuda a controlar o acesso entre partes da arquitetura.
+  - Quando há objetos compartilhados (como utilitários ou logs) que não devem ser acessados por certas camadas, cria-se uma nova camada de serviços para isolá-los.
+  - Essa camada é aberta para permitir flexibilidade, enquanto outras permanecem fechadas para manter o isolamento.
+  - Documentar quais camadas são abertas ou fechadas evita acoplamento excessivo e facilita manutenção e testes.
+
+- **Classificações das Características da Arquitetura**
+  A arquitetura em camadas é simples, de baixo custo e fácil de entender, mas tem limitações importantes à medida que cresce em tamanho e complexidade
+
+- Pontos fortes:
+
+★★★★★ Custo e simplicidade: fáceis de implementar e manter, por serem monolíticas e sem dependência de rede.
+
+- Pontos fracos:
+
+★★ Implementabilidade e testabilidade: mudanças pequenas exigem nova implementação completa, com alto risco e pouco suporte a testes abrangentes.
+
+★★★ Confiabilidade: razoável pela ausência de falhas de rede, mas afetada pela baixa testabilidade e risco de falhas globais.
+
+★ Elasticidade e escalabilidade: muito limitadas; difícil aumentar capacidade ou desempenho sem grande esforço técnico.
+
+★★ Desempenho: prejudicado por camadas fechadas e falta de paralelismo; pode ser melhorado com cache e multithreading, mas não é natural ao modelo.
+
+★ Tolerância a falhas e disponibilidade: frágeis; um erro pequeno pode derrubar toda a aplicação e o tempo de recuperação é alto.
+
+
+# Aula 27/10
+
+## Arquitetura de Pipeline
+
+A arquitetura pipeline (ou pipes-and-filters) é um estilo fundamental que divide a funcionalidade em partes independentes conectadas em sequência. É o princípio por trás de linguagens como Bash e Zsh, e tem paralelos em linguagens funcionais e no modelo MapReduce. Embora apareça em exemplos simples, também se aplica a sistemas comerciais complexos.
+
+![alt text](image.png)
+
+Os filtros são divididos em categorias sendo elas:
+
+*Produtor* - ponto de partida
+
+*Transformador* - aceita a entrada e se necessário realiza uma transformação
+
+*Verificador* - Aceita a entrada, testa um ou mais critério e se necessário produz uma saída
+
+*Consumidor* - O Ponto de término do fluxo da pipeline
+
+![alt text](image-1.png)
 
 
